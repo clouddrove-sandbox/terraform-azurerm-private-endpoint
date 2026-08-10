@@ -14,5 +14,5 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.10.5
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
       - uses: pre-commit/action@v3.0.1
