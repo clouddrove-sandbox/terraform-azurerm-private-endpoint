@@ -1,3 +1,9 @@
+## 1.0.0 (2026-08-10)
+
+### Features
+
+* adding the module ([d769929](https://github.com/clouddrove-sandbox/terraform-azurerm-private-endpoint/commit/d7699290d5367aee3cb5345a1d18f19d65fd1d61))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
