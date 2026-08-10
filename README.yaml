@@ -1,0 +1,27 @@
+name: Terraform Azure Private Endpoint
+
+intro: |-
+  A simple Azure Private Endpoint module using only the official HashiCorp AzureRM provider.
+
+license: "APACHE"
+github_repo: terraform-az-modules/terraform-azurerm-privateendpoint
+
+prerequisites:
+  - name: Terraform
+    url: https://developer.hashicorp.com/terraform/downloads
+    version: ">= 1.10.0"
+
+providers:
+  - name: azurerm
+    url: https://registry.terraform.io/providers/hashicorp/azurerm/latest
+    version: ">= 4.0"
+
+modules:
+  - name: tags
+    url: https://registry.terraform.io/modules/terraform-az-modules/tags/azurerm/latest
+    version: "1.0.2"
+description: |-
+  Creates an Azure Private Endpoint for an Azure resource or Private Link Service alias. Supports manual approval, subresources, static IPs, existing Private DNS zones, Edge Zones, tags, and timeouts.
+
+usage: |-
+  See the examples directory for basic and complete configurations.

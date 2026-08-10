@@ -1,0 +1,19 @@
+name: Terraform diff
+
+on:
+  pull_request:
+    paths: ["**.tf", "**.tftest.hcl"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.5
+      - run: terraform init -backend=false
+      - run: terraform test

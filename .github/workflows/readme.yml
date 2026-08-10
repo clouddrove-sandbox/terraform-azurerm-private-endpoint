@@ -1,0 +1,23 @@
+name: README
+
+on:
+  pull_request:
+    paths:
+      - "*.tf"
+      - "README.yaml"
+      - "docs/**"
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: terraform-docs/gh-actions@v1.4.1
+        with:
+          working-dir: .
+          output-file: docs/io.md
+          output-method: replace
+          fail-on-diff: true

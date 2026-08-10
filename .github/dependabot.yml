@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 3
+    labels: [dependencies]
+  - package-ecosystem: terraform
+    directory: /
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 3
+    labels: [dependencies]
+  - package-ecosystem: terraform
+    directory: /examples/complete
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 3
+    labels: [dependencies]
